@@ -19,7 +19,7 @@ const startAPI = async () => {
   print(`⏳ Starting server boot...`)
   let app: Express = express()
 
-  const port = process.env.PORT
+  const PORT = 9657
 
   app.use('/static', express.static(__dirname + '/public'))
   app.use(cors({ origin: '*' }))
@@ -50,9 +50,9 @@ const startAPI = async () => {
     res.end()
   })
 
-  app.listen(port, () => {
+  app.listen(PORT, () => {
     print(
-      `⚡️ [botzap-mk-auth-api]: Server is running at http://localhost:${port}.`,
+      `⚡️ [botzap-mk-auth-api]: Server is running at http://localhost:${PORT}.`,
       'success'
     )
 

@@ -7,10 +7,10 @@ import {
   Body
 } from 'routing-controllers'
 import { Response } from 'express'
+import { MKRep } from '../repositorys/MKRep'
 import HttpResponse from '../types/http.response'
 import Translate from '../i18n/translate'
 import moment from 'moment'
-import { MKRep } from '../repositorys/MKRep'
 
 @Controller('/botzap-mk-auth')
 export class AuthController {
