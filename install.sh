@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if [ "$EUID" -ne 0 ]; then
   echo "🚫 Este script precisa ser executado como root (use: sudo ./install.sh)"
   exit 1
@@ -5,6 +6,7 @@ fi
 
 rm -rf /var/www/botzap-mk-auth
 clear
+
 curl --version | grep "curl"
 if [ $? -eq 0 ]
 then
